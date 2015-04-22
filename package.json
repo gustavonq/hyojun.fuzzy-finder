@@ -1,0 +1,26 @@
+{
+  "name": "hyojun.js.fuzzy-finder",
+  "version": "0.1.0",
+  "description": "bootstrap for grunt + js + css + cached pages",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:fbiz/hyojun.js.fuzzy-finder.git"
+  },
+  "keywords": [
+    "js",
+    "fuzzy",
+    "guideline"
+  ],
+  "author": "igor almeida",
+  "license": "ISC",
+  "devDependencies": {
+    "cheerio": "^0.19.0",
+    "grunt": "^0.4.5",
+    "request": "^2.55.0",
+    "grunt-contrib-requirejs": "^0.4.4"
+  }
+}
