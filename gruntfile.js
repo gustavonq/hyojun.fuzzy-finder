@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 
 		'cache-pages' : {
 			'guideline' : {
-				'out' : 'test/cache.js',
+				'out' : 'test/fuzzy-finder-plugin.js',
 				'pages' : ['guideline/guideline-pages/listas.jsp', 'guideline/mockup/troque.jsp'],
 				'rules' : {
 					'link' : {
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
 
 	grunt.loadTasks('tasks');
 	grunt.loadTasks('node_modules/grunt-contrib-requirejs/tasks');
-	grunt.registerTask('default',['requirejs']);
-	//grunt.registerTask('default',['cache-pages']);
+	//grunt.registerTask('default',['requirejs']);
+	grunt.registerTask('default',['requirejs','cache-pages']);
 };
 
