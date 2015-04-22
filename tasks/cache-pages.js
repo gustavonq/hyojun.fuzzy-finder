@@ -44,12 +44,12 @@ module.exports = function(grunt){
 			var rule, fn;
 			for (rule in data.rules){
 				matcher = data.rules[rule];
-				if (typeof matcher.each === 'function'){
+				if (typeof matcher.get === 'function'){
 					$(matcher.query).each(function(index, ele){
 						var blob = getBlob();
 						blob.h = url;
 						blob.t = rule;
-						var content = matcher.each($(ele), blob);
+						var content = matcher.get($(ele), blob);
 						if (content){
 							addBlob(blob);
 						}
@@ -88,9 +88,14 @@ module.exports = function(grunt){
 		}
 
 		function pickURL(){
-			if (queue.length===0){
-				grunt.log.ok('cache done');
-				console.log(result.length+" results found");
+			if (queue.length===0) {
+				if (typeof data.out === 'function'){
+					data.out(result, data);
+				} else if (typeof data.out === 'string'){
+					grunt.file.write( data.out,
+						"require('fuzzy-finder/controller')("+JSON.stringify(result)+");"
+					);
+				}
 				done();
 				return;
 			}
