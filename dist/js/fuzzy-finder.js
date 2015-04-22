@@ -528,13 +528,15 @@ define('fuzzy-finder/controller',[ "fuzzy-finder/model", "fuzzy-finder/view", "f
 		}
 	};
 
-	return ctrl;
-
-	/*var inputEle = document.getElementById('fuzzy-query');
-	var resultEle = document.getElementById('fuzzy-result');
-	if (!!inputEle && !!resultEle && !!window.guideline_cache){
-		inputEle.plugin = new ctrl(inputEle, resultEle, window.guideline_cache);
-	}*/
+	return function(db){
+		var inputEle = document.getElementById('fuzzy-query');
+		var resultEle = document.getElementById('fuzzy-result');
+		if (!!inputEle && !!resultEle && !!db){
+			inputEle.plugin = new ctrl(inputEle, resultEle, db);
+		} else {
+			console.warn('missing dependencies', inputEle, resultEle, db);
+		}
+	}
 
 });
 
