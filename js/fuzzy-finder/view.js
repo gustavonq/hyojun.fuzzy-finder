@@ -62,7 +62,6 @@ define(function(){
 				'className' :'item',
 				'href': blob.h.val || blob.h,
 				'target': '_blank',
-				//'data-score' : (blob.score||0).toPrecision(3)
 				'data-info': blob.t || ''
 			});
 
