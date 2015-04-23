@@ -4,17 +4,32 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 		'requirejs' : {
-			compile: {
-				options: {
-					optimize : 'none',
-					baseUrl: "js",
-					name: "fuzzy-finder/controller",
-					out: "dist/js/fuzzy-finder.js"
+			'dev': {
+				'options': {
+					'optimize' : 'none',
+					'baseUrl': "js",
+					'name': "fuzzy-finder/controller",
+					'out': "dist/js/fuzzy-finder.min.js"
+				}
+			},
+			'dist-amd': {
+				'options': {
+					'baseUrl': "js",
+					'name': "fuzzy-finder/controller",
+					'out': "dist/js/fuzzy-finder.min.js"
+				}
+			},
+			'dist-almond': {
+				'options': {
+					'baseUrl': "js",
+					'include' : ['lib/almond-0.3.1'],
+					'name': "fuzzy-finder/controller",
+					'out': "dist/js/fuzzy-finder-almond.min.js"
 				}
 			}
 		},
 
-		'cache-pages' : {
+		'fuzzy-finder-cache' : {
 			'guideline' : {
 				'out' : 'test/fuzzy-finder-plugin.js',
 				'pages' : ['guideline/guideline-pages/listas.jsp', 'guideline/mockup/troque.jsp'],
@@ -51,9 +66,8 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadTasks('tasks');
 	grunt.loadTasks('node_modules/grunt-contrib-requirejs/tasks');
-	//grunt.registerTask('default',['requirejs']);
-	grunt.registerTask('default',['requirejs','cache-pages']);
+	grunt.loadTasks('node_modules/hyojun.grunt.fuzzy-finder-cache/tasks');
+	grunt.registerTask('default',['requirejs:dist-amd','requirejs:dist-almond','fuzzy-finder-cache']);
 };
 

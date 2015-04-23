@@ -18,9 +18,8 @@
   "author": "igor almeida",
   "license": "ISC",
   "devDependencies": {
-    "cheerio": "^0.19.0",
     "grunt": "^0.4.5",
-    "request": "^2.55.0",
-    "grunt-contrib-requirejs": "^0.4.4"
+    "grunt-contrib-requirejs": "^0.4.4",
+    "hyojun.grunt.fuzzy-finder-cache": "https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache/get/0.1.1.tar.gz"
   }
 }
