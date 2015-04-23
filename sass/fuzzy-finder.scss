@@ -1,4 +1,4 @@
-// Color congig
+// Color config
 $row-font-color: #666;
 
 $focus-border: #b0d8e6;
@@ -11,10 +11,6 @@ $type-plugin: #00c7fd;
 $type-link: #66ce5b;
 $type-url: #ccc;
 $type-css: #ffcc00;
-
-.gl-content {
-	font-family: Arial;
-}
 
 .gl-search-fuzzy {
 	display: inline-block;
@@ -113,7 +109,10 @@ $type-css: #ffcc00;
 	transition: border 200ms ease-out;
 	width: 100%;
 
-	@include placeholder {
+	&::-webkit-input-placeholder ,
+	&:-moz-placeholder,
+	&::-moz-placeholder,
+	&:-ms-input-placeholder {
 		color: rgba(white, .5);
 		opacity: 1;
 	}

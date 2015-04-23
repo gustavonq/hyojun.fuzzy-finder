@@ -16,7 +16,7 @@ define([ "fuzzy-finder/model", "fuzzy-finder/view", "fuzzy-finder/results-contro
 			this.inputEle.form.addEventListener('submit', this.nav.openSelected.bind(this.nav), false);
 			this.inputEle.addEventListener('keyup', this.nav.check.bind(this.nav), false);
 			this.inputEle.addEventListener('keyup', this.checkQuery.bind(this), false);
-			this.inputEle.form.addEventListener('focusout', this.closeView.bind(this));
+			//this.inputEle.form.addEventListener('focusout', this.closeView.bind(this));
 		},
 
 		checkQuery : function (event) {

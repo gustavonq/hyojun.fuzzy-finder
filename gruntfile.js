@@ -29,6 +29,17 @@ module.exports = function(grunt) {
 			}
 		},
 
+		"sass" : {
+			"options": {
+				"sourceMap": false
+			},
+			"dist": {
+				"files": {
+					"dist/css/fuzzy-finder.css" : "sass/fuzzy-finder.scss"
+				}
+			}
+		},
+
 		'fuzzy-finder-cache' : {
 			'guideline' : {
 				'out' : 'test/fuzzy-finder-plugin.js',
@@ -67,7 +78,8 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadTasks('node_modules/grunt-contrib-requirejs/tasks');
+	grunt.loadTasks('node_modules/grunt-sass/tasks');
 	grunt.loadTasks('node_modules/hyojun.grunt.fuzzy-finder-cache/tasks');
-	grunt.registerTask('default',['requirejs:dist-amd','requirejs:dist-almond','fuzzy-finder-cache']);
+	grunt.registerTask('default',['sass', 'requirejs:dist-amd', 'requirejs:dist-almond', 'fuzzy-finder-cache']);
 };
 
