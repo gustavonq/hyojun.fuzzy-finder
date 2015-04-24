@@ -56,13 +56,13 @@ define(function(){
 
 		if (typeof blob.c === 'object' || typeof blob.h === 'object'){
 
-			var isURLItem = blob.t === 'url';
+			var isURLItem = typeof blob.h === 'object';
 			var li = dom('li');
 			var a = dom('a',{
 				'className' :'item',
 				'href': blob.h.val || blob.h,
-				'target': '_blank',
-				'data-info': blob.t || ''
+				'data-type' : (blob.t||''),
+				'target': '_blank'
 			});
 
 			var content = getContentMatch(isURLItem ? blob.h : blob.c, 'content');
