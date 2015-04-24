@@ -168,7 +168,7 @@
 			}
 
 			&:before {
-				content: attr(data-info) "\2002\25B8\2002";
+				content: attr(data-type) "\2002\25B8\2002";
 			}
 
 			&:hover {
