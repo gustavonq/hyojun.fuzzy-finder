@@ -16,7 +16,7 @@ define([ "hyojun.fuzzy-finder/model", "hyojun.fuzzy-finder/view", "hyojun.fuzzy-
 			this.inputEle.form.addEventListener('submit', this.nav.openSelected.bind(this.nav), false);
 			this.inputEle.addEventListener('keyup', this.nav.check.bind(this.nav), false);
 			this.inputEle.addEventListener('keyup', this.checkQuery.bind(this), false);
-			//this.inputEle.form.addEventListener('focusout', this.closeView.bind(this));
+			this.inputEle.form.addEventListener('focusout', this.closeView.bind(this));
 		},
 
 		checkQuery : function (event) {
@@ -77,6 +77,7 @@ define([ "hyojun.fuzzy-finder/model", "hyojun.fuzzy-finder/view", "hyojun.fuzzy-
 
 			if (!!result && !!result.length) {
 				this.view.clearResults();
+				console.dir(result);
 				this.view.render(result);
 				this.nav.refresh();
 			} else {

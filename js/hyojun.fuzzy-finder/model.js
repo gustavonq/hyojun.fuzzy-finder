@@ -71,6 +71,7 @@ define(function(){
 			} catch(err){
 				console.warn('malformed query: ',err);
 				reg = null;
+				return;
 			}
 
 			function testBlob(blob){
@@ -90,9 +91,8 @@ define(function(){
 					val = match[0].toLowerCase();
 					score = score || query.length / val.length;
 
-					if (score<0.5){
+					if (score<0.3){
 						//way tooo different from query
-						//console.log(score, query, val, query.length, val.length);
 						return;
 					}
 
@@ -107,7 +107,7 @@ define(function(){
 						index = blobVal.toLowerCase().indexOf(val);
 
 						//to be rendered as url (different view)
-						matchingBlob.t = 'url';
+						matchingBlob.t = blob.t;
 						matchingBlob.h = {
 							val : blobVal,
 							match : [index, val.length]
