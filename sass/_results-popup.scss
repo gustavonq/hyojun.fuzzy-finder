@@ -1,0 +1,193 @@
+@import "core";
+
+.gl-search-fuzzy {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	height: 53px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 70%;
+
+	&::before {
+		color: $focus-border;
+		content: attr(data-report);
+		font-style: italic;
+		position: absolute;
+		right: 20px;
+		top: 17px;
+	}
+}
+
+%gl-search-selection {
+	bottom: 0;
+	height: 2px;
+	margin: 0;
+	opacity: .4;
+	padding: 0;
+	position: absolute;
+	transition: height .1s ease-in-out;
+	width: 20px;
+}
+
+%gl-search-background-selection {
+	background: $item-background;
+
+	&.template {
+
+		.selection {
+			background: $type-template;
+		}
+	}
+
+	&.data-service {
+
+		.selection {
+			background: $type-service;
+		}
+	}
+
+	&.data-plugin {
+
+		.selection {
+			background: $type-plugin;
+		}
+	}
+
+	&.link {
+
+		.selection {
+			background: $type-link;
+		}
+	}
+
+	&.css {
+
+		.selection {
+			background: $type-css;
+		}
+	}
+
+	.holder-url {
+		opacity: 1;
+	}
+}
+
+#fuzzy-result {
+	background: white;
+	border: 1px solid $result-border;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top: 0;
+	box-shadow: 0 3px 10px -2px black;
+	box-sizing: border-box;
+	display: none;
+	font-family: "Courier", "Tahoma";
+	font-size: 15px;
+	left: 0;
+	list-style-type: none;
+	margin: 0 auto;
+	max-height: 630px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 0;
+	position: absolute;
+	top: 44px;
+	transition: .2s ease-in-out;
+	width: 100%;
+
+	&.active {
+		display: block;
+	}
+
+	li {
+		border-bottom: 1px solid $item-background;
+
+		&.hover {
+
+			.item {
+				@extend %gl-search-background-selection;
+			}
+		}
+
+		.item {
+			border-left: 3px solid transparent;
+			color: $row-font-color;
+			display: block;
+			font-size: 12px;
+			padding: 8px 10px;
+			position: relative;
+			white-space: nowrap;
+
+			&.template {
+				border-color: $type-template;
+
+				.selection {
+					border-bottom: solid 2px $type-template;
+				}
+			}
+
+			&.data-service {
+				border-color: $type-service;
+
+				.selection {
+					border-bottom: solid 2px $type-service;
+				}
+			}
+
+			&.data-plugin {
+				border-color: $type-plugin;
+
+				.selection {
+					border-bottom: solid 2px $type-plugin;
+				}
+			}
+
+			&.link {
+				border-color: $type-link;
+
+				.selection {
+					border-bottom: solid 2px $type-link;
+				}
+			}
+
+			&.css {
+				border-color: $type-css;
+
+				.selection {
+					border-bottom: solid 2px $type-css;
+				}
+			}
+
+			&:before {
+				content: attr(data-info) "\2002\25B8\2002";
+			}
+
+			&:hover {
+				@extend %gl-search-background-selection;
+			}
+
+			.content,
+			.selection {
+				color: black;
+				font-weight: bold;
+			}
+
+			.content {
+				position: relative;
+			}
+
+			.selection {
+				background: transparent;
+				transition: background 200ms ease-out;
+			}
+
+			.url {
+				display: block;
+				margin: 5px 0 0;
+				opacity: .7;
+				position: relative;
+			}
+		}
+	}
+}
