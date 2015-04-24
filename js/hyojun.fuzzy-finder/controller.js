@@ -77,7 +77,6 @@ define([ "hyojun.fuzzy-finder/model", "hyojun.fuzzy-finder/view", "hyojun.fuzzy-
 
 			if (!!result && !!result.length) {
 				this.view.clearResults();
-				console.dir(result);
 				this.view.render(result);
 				this.nav.refresh();
 			} else {
