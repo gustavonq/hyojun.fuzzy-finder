@@ -2,7 +2,7 @@
 
 **version: 0.1.0**
 
--working on: *Chrome 41+, Firefox 44+, IE 9+, Safari 7+*
+-working on: *Chrome 41+, Firefox 44+, IE 10+, Safari 7+*
 
 ##About
 
@@ -40,7 +40,7 @@ The implementation success relies on 3 steps:
 The javacript plugin requires only this html code:
 
 ```
-<form class="gl-fuzzy-finder">
+<form>
 	<input id="fuzzy-query" type="text"/>
 	<ul id="fuzzy-result"></ul>
 </form>
@@ -118,6 +118,8 @@ Sometimes you just remember the url (not the service name, or the module name) a
 
 ```url!{{query}}```
 
+> you can combine this feature with filters as well: ```template:url!search-suggestion```
+
 ### # Keyboard shortcuts:
 
 Considering you query returned a few results, you can:
@@ -139,7 +141,12 @@ Considering you query returned a few results, you can:
 
 3 - ```npm start``` 
 
-This is enough for those who want to see the generated tests. The test page is created caching [BBB Technology](http://bbc.com/technology) so you can see how results pop up and all asssets used on the project.
+```npm start``` will run the grunt's **default task** and start serving the tests via [python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)
+
+All tests will be placed on **/test** folder.
+
+> The test page is created caching [BBB Technology home page](http://bbc.com/technology), so you can see how results pop up and all asssets used on the project. (tip: type a query to bring some headlines from their homepage).
+
 
 ###- Pluging hyojun.fuzzy-finder on existent projects
 
@@ -155,7 +162,7 @@ If you have your own **hyojun.guideline** project running:
 
 * new themes;
 * run levenstain algorithm when no results were found;
-* test pages over phantom to make realible tests. (today is only url fetch);
+* test pages over phantom to make more realible cache (today is only url fetch);
 
 
 ####Fork it, make it better and send your pull request!
