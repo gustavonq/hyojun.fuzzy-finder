@@ -1,7 +1,7 @@
 {
   "name": "hyojun.js.fuzzy-finder",
-  "version": "0.1.0",
-  "description": "bootstrap for grunt + js + css + cached pages",
+  "version": "0.1.1",
+  "description": "bootstrap with grunt,css,js and test pages regarding hyojun.fuzzy-finder",
 	"private" : true,
   "main": "gruntfile.js",
   "scripts": {
