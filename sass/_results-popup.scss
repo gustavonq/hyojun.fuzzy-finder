@@ -1,21 +1,23 @@
 @import "core";
 
-.gl-search-fuzzy {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	height: 53px;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	width: 70%;
+.fuzzy-holder {
+	// display: inline-block;
+	// -webkit-font-smoothing: antialiased;
+	// height: 53px;
+	// margin: 0;
+	// padding: 0;
+	// position: relative;
+	// width: 70%;
 
 	&::before {
 		color: $focus-border;
 		content: attr(data-report);
+		font-family: "Arial";
 		font-style: italic;
 		position: absolute;
 		right: 20px;
 		top: 17px;
+  		font-size: 13px;
 	}
 }
 
@@ -117,6 +119,7 @@
 			font-size: 12px;
 			padding: 8px 10px;
 			position: relative;
+			text-decoration: none;
 			white-space: nowrap;
 
 			&.template {
