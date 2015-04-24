@@ -111,7 +111,7 @@
         #gl-fuzzy-result li .item[data-type="css"] .selection {
           border-bottom: solid 2px #ffcc00; }
       #gl-fuzzy-result li .item:before {
-        content: attr(data-info) "\2002\25B8\2002"; }
+        content: attr(data-type) "\2002\25B8\2002"; }
       #gl-fuzzy-result li .item .content, #gl-fuzzy-result li .item .selection {
         color: black;
         font-weight: bold; }

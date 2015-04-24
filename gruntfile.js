@@ -16,6 +16,10 @@ module.exports = function(grunt) {
 				'src': ['inc/header.html', 'inc/scripts-concat.html','inc/body.html'],
 				'dest' : 'test/index-pack.html'
 			},
+			'test-css': {
+				'src': ['inc/header.html', 'inc/body-test-css.html'],
+				'dest' : 'test/index-test-css.html'
+			},
 			'pack-cache' : {
 				'src' : ['dist/js/hyojun.fuzzy-finder-almond.min.js','test/hyojun.fuzzy-finder-plugin.js'],
 				'dest' : 'test/hyojun.fuzzy-finder.pack.js'
