@@ -1,3 +1,26 @@
+#fuzzy-query {
+  background-color: rgba(255, 255, 255, 0.15);
+  background-image: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAk1BMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+AVyv3AAAAMHRSTlMAP6zr7qs+BZn4lgSb6l4ICV+Y5yAh6DypYabm+wsM/OT57OViZCKT2xyl4P7fG+HU/SppAAAAkklEQVQY062P2Q6CMBBFB4tL3dGWIi4oKhYRvf//dSaEkI7Bt96nkzmZjch3goEIxXD0Wx5PABlKYDrjYo7FckXrSGDD52CrGtAxjCsSRC3tkLpifzi2dMrOrriIDnP5r+PKd9xauvMdBkI3UOT8Knp0f7AG5/MEtuQqeFavODVUw76pL6XFR3szqq4K6jeK/OYL34oN1A+z+okAAAAASUVORK5CYII=);
+  background-position: 9px 7px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border: 1px solid rgba(176, 216, 230, 0);
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  letter-spacing: 1px;
+  margin-top: 6px;
+  outline: 0;
+  padding: 10px 10px 10px 40px;
+  transition: border 200ms ease-out;
+  width: 100%; }
+  #fuzzy-query::-webkit-input-placeholder, #fuzzy-query:-moz-placeholder, #fuzzy-query::-moz-placeholder, #fuzzy-query:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1; }
+  #fuzzy-query:hover, #fuzzy-query:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(176, 216, 230, 0.5); }
+
 .gl-search-fuzzy {
   display: inline-block;
   -webkit-font-smoothing: antialiased;
@@ -16,16 +39,14 @@
 
 #fuzzy-result li.hover .item, #fuzzy-result li .item:hover {
   background: #eee; }
-  #fuzzy-result li.hover .ate.item .selection, #fuzzy-result li .ate.item:hover .selection {
+  #fuzzy-result li.hover .template.item .selection, #fuzzy-result li .template.item:hover .selection {
     background: #dccf05; }
-  #fuzzy-result li.hover .ice.item .selection, #fuzzy-result li .ice.item:hover .selection {
+  #fuzzy-result li.hover .data-service.item .selection, #fuzzy-result li .data-service.item:hover .selection {
     background: #ff1493; }
-  #fuzzy-result li.hover .gin.item .selection, #fuzzy-result li .gin.item:hover .selection {
+  #fuzzy-result li.hover .data-plugin.item .selection, #fuzzy-result li .data-plugin.item:hover .selection {
     background: #00c7fd; }
-  #fuzzy-result li.hover .ink.item .selection, #fuzzy-result li .ink.item:hover .selection {
+  #fuzzy-result li.hover .link.item .selection, #fuzzy-result li .link.item:hover .selection {
     background: #66ce5b; }
-  #fuzzy-result li.hover .url.item .selection, #fuzzy-result li .url.item:hover .selection {
-    background: #ccc; }
   #fuzzy-result li.hover .css.item .selection, #fuzzy-result li .css.item:hover .selection {
     background: #ffcc00; }
   #fuzzy-result li.hover .item .holder-url, #fuzzy-result li .item:hover .holder-url {
@@ -65,29 +86,25 @@
       padding: 8px 10px;
       position: relative;
       white-space: nowrap; }
-      #fuzzy-result li .item[data-info="template"] {
+      #fuzzy-result li .item.template {
         border-color: #dccf05; }
-        #fuzzy-result li .item[data-info="template"] .selection {
+        #fuzzy-result li .item.template .selection {
           border-bottom: solid 2px #dccf05; }
-      #fuzzy-result li .item[data-info="data-service"] {
+      #fuzzy-result li .item.data-service {
         border-color: #ff1493; }
-        #fuzzy-result li .item[data-info="data-service"] .selection {
+        #fuzzy-result li .item.data-service .selection {
           border-bottom: solid 2px #ff1493; }
-      #fuzzy-result li .item[data-info="data-plugin"] {
+      #fuzzy-result li .item.data-plugin {
         border-color: #00c7fd; }
-        #fuzzy-result li .item[data-info="data-plugin"] .selection {
+        #fuzzy-result li .item.data-plugin .selection {
           border-bottom: solid 2px #00c7fd; }
-      #fuzzy-result li .item[data-info="link"] {
+      #fuzzy-result li .item.link {
         border-color: #66ce5b; }
-        #fuzzy-result li .item[data-info="link"] .selection {
+        #fuzzy-result li .item.link .selection {
           border-bottom: solid 2px #66ce5b; }
-      #fuzzy-result li .item[data-info="url"] {
-        border-color: #ccc; }
-        #fuzzy-result li .item[data-info="url"] .selection {
-          border-bottom: solid 2px #ccc; }
-      #fuzzy-result li .item[data-info="css"] {
+      #fuzzy-result li .item.css {
         border-color: #ffcc00; }
-        #fuzzy-result li .item[data-info="css"] .selection {
+        #fuzzy-result li .item.css .selection {
           border-bottom: solid 2px #ffcc00; }
       #fuzzy-result li .item:before {
         content: attr(data-info) "\2002\25B8\2002"; }

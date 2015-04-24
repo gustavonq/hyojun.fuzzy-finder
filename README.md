@@ -2,7 +2,7 @@
 
 **version: 0.1.0**
 
-* **working** on: Chrome 41+, Firefox 44+, IE 9+, Safari 7+*
+-working on: *Chrome 41+, Firefox 44+, IE 9+, Safari 7+*
 
 ##About
 
@@ -29,24 +29,24 @@ The css was created using [sass](http://sass-lang.com) and has only the rules ex
 
 ##How it works?
 
-Fuzzy-Finder is blazing fast because all data is already cached and available on the page. You can [define your own set of rules](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache.git) to define what is going to be cached.
+hyojun.fuzzy-finder is blazing fast because all data is already cached and available on the page. You can [define your own set of rules](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache.git) and set what is going to be cached.
 
-The implementation success relies only on 3 steps:
+As you type your query, after the 2th char the engine will perform a search inside the database you provided, testing the query and rendering results.
+
+The implementation success relies on 3 steps:
 
 ###- HTML
 
 The javacript plugin requires only this html code:
 
 ```
-<form>
+<form class="gl-fuzzy-finder">
 	<input id="fuzzy-query" type="text"/>
 	<ul id="fuzzy-result"></ul>
 </form>
 ```
 
-> when the query returned results, besides adding them on the list a class ```active``` will be placed on ```#fuzzy-result```
-
-As you type, after the 2th char the engine will perform a search inside the database you provided, testing the query and rendering results.
+> if your query returned results, besides adding them on the list (```<li>```) a class ```active``` will be placed on ```#fuzzy-result``` holder.
 
 
 ###- CSS
@@ -78,7 +78,7 @@ Results mostly* follow the structure:
 
 ```
 <li>
-	<a class="item {{blob.t}}" href="{{blob.h}}" target="_blank">
+	<a class="item" href="{{blob.h}}" target="_blank" data-type="{{blob.t}}">
 		<span class="content">{{blob.c}} (leading chunk)</span>
 		<span class="selection">{{blob.c}} (matching value)</span>
 		<span class="content">{{blob.c}} (trailing chunk)</span>

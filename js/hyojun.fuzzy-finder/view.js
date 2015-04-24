@@ -59,8 +59,9 @@ define(function(){
 			var isURLItem = typeof blob.h === 'object';
 			var li = dom('li');
 			var a = dom('a',{
-				'className' :'item ' + (blob.t||''),
+				'className' :'item',
 				'href': blob.h.val || blob.h,
+				'data-type' : (blob.t||''),
 				'target': '_blank'
 			});
 
