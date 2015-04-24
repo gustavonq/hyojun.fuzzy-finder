@@ -1,4 +1,4 @@
-define([ "fuzzy-finder/model", "fuzzy-finder/view", "fuzzy-finder/results-controller" ], function ( Model, View, NavController) {
+define([ "hyojun.fuzzy-finder/model", "hyojun.fuzzy-finder/view", "hyojun.fuzzy-finder/results-controller" ], function ( Model, View, NavController) {
 
 	var ctrl = function (input, resultHolder, db ) {
 		this.db = db;

@@ -1,5 +1,5 @@
 node_modules/
 .DS_Store
 *.log
-test/*.js
+test/
 *.sass-cache
