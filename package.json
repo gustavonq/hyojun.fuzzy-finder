@@ -4,7 +4,8 @@
   "description": "bootstrap for grunt + js + css + cached pages",
   "main": "gruntfile.js",
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+		"start" : "python -m SimpleHTTPServer"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,6 @@
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-sass": "^0.18.1",
-    "hyojun.grunt.fuzzy-finder-cache": "https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache/get/0.1.1.tar.gz"
+    "hyojun.grunt.fuzzy-finder-cache": "https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache/get/0.1.2.tar.gz"
   }
 }
