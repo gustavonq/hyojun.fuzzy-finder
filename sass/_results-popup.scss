@@ -1,6 +1,6 @@
 @import "core";
 
-.fuzzy-holder {
+.gl-fuzzy-holder {
 	-webkit-font-smoothing: antialiased;
 	margin: 0 auto;
 	padding: 0;
@@ -73,7 +73,7 @@
 	}
 }
 
-#fuzzy-result {
+#gl-fuzzy-result {
 	background: white;
 	border: 1px solid $result-border;
 	border-bottom-left-radius: 10px;
@@ -168,7 +168,7 @@
 			}
 
 			&:before {
-				content: attr(data-info) "\2002\25B8\2002";
+				content: attr(data-type) "\2002\25B8\2002";
 			}
 
 			&:hover {

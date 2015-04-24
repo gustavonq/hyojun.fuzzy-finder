@@ -1,4 +1,4 @@
-#fuzzy-query {
+#gl-fuzzy-query {
   background-color: rgba(255, 255, 255, 0.15);
   background-image: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAk1BMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+AVyv3AAAAMHRSTlMAP6zr7qs+BZn4lgSb6l4ICV+Y5yAh6DypYabm+wsM/OT57OViZCKT2xyl4P7fG+HU/SppAAAAkklEQVQY062P2Q6CMBBFB4tL3dGWIi4oKhYRvf//dSaEkI7Bt96nkzmZjch3goEIxXD0Wx5PABlKYDrjYo7FckXrSGDD52CrGtAxjCsSRC3tkLpifzi2dMrOrriIDnP5r+PKd9xauvMdBkI3UOT8Knp0f7AG5/MEtuQqeFavODVUw76pL6XFR3szqq4K6jeK/OYL34oN1A+z+okAAAAASUVORK5CYII=);
   background-position: 9px 7px;
@@ -14,20 +14,20 @@
   padding: 10px 10px 10px 40px;
   transition: border 200ms ease-out;
   width: 100%; }
-  #fuzzy-query::-webkit-input-placeholder, #fuzzy-query:-moz-placeholder, #fuzzy-query::-moz-placeholder, #fuzzy-query:-ms-input-placeholder {
+  #gl-fuzzy-query::-webkit-input-placeholder, #gl-fuzzy-query:-moz-placeholder, #gl-fuzzy-query::-moz-placeholder, #gl-fuzzy-query:-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.5);
     opacity: 1; }
-  #fuzzy-query:hover, #fuzzy-query:focus {
+  #gl-fuzzy-query:hover, #gl-fuzzy-query:focus {
     background-color: rgba(255, 255, 255, 0.2);
     border-color: rgba(176, 216, 230, 0.5); }
 
-.fuzzy-holder {
+.gl-fuzzy-holder {
   -webkit-font-smoothing: antialiased;
   margin: 0 auto;
   padding: 0;
   position: relative;
   width: 70%; }
-  .fuzzy-holder::before {
+  .gl-fuzzy-holder::before {
     color: #b0d8e6;
     content: attr(data-report);
     font-family: "Arial";
@@ -37,22 +37,22 @@
     top: 10px;
     font-size: 13px; }
 
-#fuzzy-result li.hover .item, #fuzzy-result li .item:hover {
+#gl-fuzzy-result li.hover .item, #gl-fuzzy-result li .item:hover {
   background: #eee; }
-  #fuzzy-result li.hover [data-type="template"].item .selection, #fuzzy-result li [data-type="template"].item:hover .selection {
+  #gl-fuzzy-result li.hover [data-type="template"].item .selection, #gl-fuzzy-result li [data-type="template"].item:hover .selection {
     background: #dccf05; }
-  #fuzzy-result li.hover [data-type="data-service"].item .selection, #fuzzy-result li [data-type="data-service"].item:hover .selection {
+  #gl-fuzzy-result li.hover [data-type="data-service"].item .selection, #gl-fuzzy-result li [data-type="data-service"].item:hover .selection {
     background: #ff1493; }
-  #fuzzy-result li.hover [data-type="data-plugin"].item .selection, #fuzzy-result li [data-type="data-plugin"].item:hover .selection {
+  #gl-fuzzy-result li.hover [data-type="data-plugin"].item .selection, #gl-fuzzy-result li [data-type="data-plugin"].item:hover .selection {
     background: #00c7fd; }
-  #fuzzy-result li.hover [data-type="link"].item .selection, #fuzzy-result li [data-type="link"].item:hover .selection {
+  #gl-fuzzy-result li.hover [data-type="link"].item .selection, #gl-fuzzy-result li [data-type="link"].item:hover .selection {
     background: #66ce5b; }
-  #fuzzy-result li.hover [data-type="css"].item .selection, #fuzzy-result li [data-type="css"].item:hover .selection {
+  #gl-fuzzy-result li.hover [data-type="css"].item .selection, #gl-fuzzy-result li [data-type="css"].item:hover .selection {
     background: #ffcc00; }
-  #fuzzy-result li.hover .item .holder-url, #fuzzy-result li .item:hover .holder-url {
+  #gl-fuzzy-result li.hover .item .holder-url, #gl-fuzzy-result li .item:hover .holder-url {
     opacity: 1; }
 
-#fuzzy-result {
+#gl-fuzzy-result {
   background: white;
   border: 1px solid #adadad;
   border-bottom-left-radius: 10px;
@@ -74,14 +74,14 @@
   top: 35px;
   transition: .2s ease-in-out;
   width: 100%; }
-  #fuzzy-result.active {
+  #gl-fuzzy-result.active {
     display: block; }
-  #fuzzy-result li {
+  #gl-fuzzy-result li {
     border-bottom: 1px solid #eee; }
-    #fuzzy-result li:last-child a {
+    #gl-fuzzy-result li:last-child a {
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px; }
-    #fuzzy-result li .item {
+    #gl-fuzzy-result li .item {
       border-left: 3px solid transparent;
       color: #666;
       display: block;
@@ -90,37 +90,37 @@
       position: relative;
       text-decoration: none;
       white-space: nowrap; }
-      #fuzzy-result li .item[data-type="template"] {
+      #gl-fuzzy-result li .item[data-type="template"] {
         border-color: #dccf05; }
-        #fuzzy-result li .item[data-type="template"] .selection {
+        #gl-fuzzy-result li .item[data-type="template"] .selection {
           border-bottom: solid 2px #dccf05; }
-      #fuzzy-result li .item[data-type="data-service"] {
+      #gl-fuzzy-result li .item[data-type="data-service"] {
         border-color: #ff1493; }
-        #fuzzy-result li .item[data-type="data-service"] .selection {
+        #gl-fuzzy-result li .item[data-type="data-service"] .selection {
           border-bottom: solid 2px #ff1493; }
-      #fuzzy-result li .item[data-type="data-plugin"] {
+      #gl-fuzzy-result li .item[data-type="data-plugin"] {
         border-color: #00c7fd; }
-        #fuzzy-result li .item[data-type="data-plugin"] .selection {
+        #gl-fuzzy-result li .item[data-type="data-plugin"] .selection {
           border-bottom: solid 2px #00c7fd; }
-      #fuzzy-result li .item[data-type="link"] {
+      #gl-fuzzy-result li .item[data-type="link"] {
         border-color: #66ce5b; }
-        #fuzzy-result li .item[data-type="link"] .selection {
+        #gl-fuzzy-result li .item[data-type="link"] .selection {
           border-bottom: solid 2px #66ce5b; }
-      #fuzzy-result li .item[data-type="css"] {
+      #gl-fuzzy-result li .item[data-type="css"] {
         border-color: #ffcc00; }
-        #fuzzy-result li .item[data-type="css"] .selection {
+        #gl-fuzzy-result li .item[data-type="css"] .selection {
           border-bottom: solid 2px #ffcc00; }
-      #fuzzy-result li .item:before {
+      #gl-fuzzy-result li .item:before {
         content: attr(data-info) "\2002\25B8\2002"; }
-      #fuzzy-result li .item .content, #fuzzy-result li .item .selection {
+      #gl-fuzzy-result li .item .content, #gl-fuzzy-result li .item .selection {
         color: black;
         font-weight: bold; }
-      #fuzzy-result li .item .content {
+      #gl-fuzzy-result li .item .content {
         position: relative; }
-      #fuzzy-result li .item .selection {
+      #gl-fuzzy-result li .item .selection {
         background: transparent;
         transition: background 200ms ease-out; }
-      #fuzzy-result li .item .url {
+      #gl-fuzzy-result li .item .url {
         display: block;
         margin: 5px 0 0;
         opacity: .7;

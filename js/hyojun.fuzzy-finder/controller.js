@@ -102,8 +102,8 @@ define([ "hyojun.fuzzy-finder/model", "hyojun.fuzzy-finder/view", "hyojun.fuzzy-
 	};
 
 	return function(db){
-		var inputEle = document.getElementById('fuzzy-query');
-		var resultEle = document.getElementById('fuzzy-result');
+		var inputEle = document.getElementById('gl-fuzzy-query');
+		var resultEle = document.getElementById('gl-fuzzy-result');
 		if (!!inputEle && !!resultEle && !!db){
 			inputEle.plugin = new ctrl(inputEle, resultEle, db);
 		} else {
