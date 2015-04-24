@@ -5,7 +5,7 @@
   "main": "gruntfile.js",
   "scripts": {
     "test": "grunt",
-		"start" : "python -m SimpleHTTPServer"
+		"start" : "grunt && python -m SimpleHTTPServer"
   },
   "repository": {
     "type": "git",
