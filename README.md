@@ -87,15 +87,15 @@ Results mostly* follow the structure:
 </li>
 ```
 
-> when performing searches on [url only](#tips-url) the ```<span class="url">{{blob.h}}</span>``` will be suppressed.
+> when performing searches on url only the ```<span class="url">{{blob.h}}</span>``` will be suppressed. *@see Tips and tricks*
 
-<h2 id="tips">Tips and tricks</h2>
+##Tips and tricks
 
 As your project grows, the results too and we start facing too much itens and what would be supposed to help end up being a pain in the ass.
 
 There are a few tips that can you doing better searches, they are:
 
-<h3 id="tips-filter"># Filtering reuslts</h3>
+### # Filtering reuslts
 
 Every *blob* has it's type (```blob.t```) and you can choose to performe your search only for a specific types. To make it work use:
 
@@ -112,13 +112,13 @@ This will first grab only *blobs* that are ```templates``` (```blob.t```) and th
 > you can combine more than on filter: ```template:link:guideline```. This example will search for **guideline** only on *blobs* that are **template** or **link**
 
 
-<h3 id="tips-url"># Testing your query over urls</h3>
+### # Testing your query over urls
 
 Sometimes you just remember the url (not the service name, or the module name) and you can test your query also on urls. There is a specific notation for that:
 
 ```url!{{query}}```
 
-<h3 id="tips-nav"># Keyboard shortcuts:</h3>
+### # Keyboard shortcuts:
 
 Considering you query returned a few results, you can:
 
