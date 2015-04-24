@@ -1,0 +1,33 @@
+@import "core";
+
+#fuzzy-query {
+	background-color: rgba(white, .15);
+	background-image: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAk1BMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+AVyv3AAAAMHRSTlMAP6zr7qs+BZn4lgSb6l4ICV+Y5yAh6DypYabm+wsM/OT57OViZCKT2xyl4P7fG+HU/SppAAAAkklEQVQY062P2Q6CMBBFB4tL3dGWIi4oKhYRvf//dSaEkI7Bt96nkzmZjch3goEIxXD0Wx5PABlKYDrjYo7FckXrSGDD52CrGtAxjCsSRC3tkLpifzi2dMrOrriIDnP5r+PKd9xauvMdBkI3UOT8Knp0f7AG5/MEtuQqeFavODVUw76pL6XFR3szqq4K6jeK/OYL34oN1A+z+okAAAAASUVORK5CYII=);
+	background-position: 9px 7px;
+	background-repeat: no-repeat;
+	background-size: 24px;
+	border: 1px solid rgba($focus-border, 0);
+	box-sizing: border-box;
+	color: white;
+	display: block;
+	letter-spacing: 1px;
+	margin-top: 6px;
+	outline: 0;
+	padding: 10px 10px 10px 40px;
+	transition: border 200ms ease-out;
+	width: 100%;
+
+	&::-webkit-input-placeholder ,
+	&:-moz-placeholder,
+	&::-moz-placeholder,
+	&:-ms-input-placeholder {
+		color: rgba(white, .5);
+		opacity: 1;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: rgba(white, .2);
+		border-color: rgba($focus-border, .5);
+	}
+}
