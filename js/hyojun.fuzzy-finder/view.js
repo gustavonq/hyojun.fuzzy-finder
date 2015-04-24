@@ -49,7 +49,7 @@ define(function(){
 				);
 			}
 		}
-		return wrapper.children ? wrapper : null;
+		return wrapper;
 	}
 
 	function getRow(blob){
