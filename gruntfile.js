@@ -3,6 +3,17 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 
+		'concat' : {
+			'test-amd': {
+				'src': ['inc/header.html', 'inc/scripts-amd.html','inc/body.html'],
+				'dest' : 'test/index-amd.html'
+			},
+			'test-almond': {
+				'src': ['inc/header.html', 'inc/scripts-almond.html','inc/body.html'],
+				'dest' : 'test/index-almond.html'
+			}
+		},
+
 		'requirejs' : {
 			'dev': {
 				'options': {
@@ -78,6 +89,7 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadTasks('node_modules/grunt-contrib-requirejs/tasks');
+	grunt.loadTasks('node_modules/grunt-contrib-concat/tasks');
 	grunt.loadTasks('node_modules/grunt-sass/tasks');
 	grunt.loadTasks('node_modules/hyojun.grunt.fuzzy-finder-cache/tasks');
 	grunt.registerTask('default',['sass', 'requirejs:dist-amd', 'requirejs:dist-almond', 'fuzzy-finder-cache']);
