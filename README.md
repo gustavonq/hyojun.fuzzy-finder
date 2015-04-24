@@ -54,7 +54,7 @@ The javacript plugin requires only this html code:
 This project is about caching the **Hyojun.Guideline** project so, there are a few *types* handled by the css in order to make easer identifying and filter results. The built in theme included on this project contains css rules for types (```blob.t```):
 
 * **css**
-* **data-plugin** - used on node elements that has javascript plugins controlling them);
+* **data-plugin** - used on node elements that has javascript plugins controlling them;
 * **templates** templates on page;
 * **text** - for headers and link (a, h1, h2, h3, h4, h5, h6);
 
@@ -64,7 +64,7 @@ There are 2 steps to make the javascript work (and many approaches to it).
 
 1 - Make sure you have [requirejs](http://requirejs.org/), [almond](https://github.com/jrburke/almond/blob/0.3.1/almond.js) or the engine you like to handle javascript AMD.
 
-> there are [distributed versions](https://bitbucket.org/fbiz/hyojun.fuzzy-finder/downloads) including [almond 0.3.1](https://github.com/jrburke/almond/blob/0.3.1/almond.js) and also with only all AMD compiled via [r.js](https://github.com/jrburke/r.js), so you won't need to worry about multiplus requests.
+> there are [distributed versions](https://bitbucket.org/fbiz/hyojun.fuzzy-finder/downloads) including [almond 0.3.1](https://github.com/jrburke/almond/blob/0.3.1/almond.js), AMD modules compiled via [r.js](https://github.com/jrburke/r.js) (you won't need to worry about multiplus requests)
 
 2 - The *namespace* to access the library is **hyojun-fuzzy-finder** and the plugin is started by the controller: **hyojun.fuzzy-finder/controller**
 
@@ -131,6 +131,25 @@ Considering you query returned a few results, you can:
 
 ##Instalation:
 
+###- For devs:
+
+1 - ```git clone git@bitbucket.org:fbiz/hyojun.fuzzy-finder.git```
+
+2 - ```npm install```
+
+3 - ```npm start``` 
+
+This is enough for those who want to see the generated tests. The test page is created caching [BBB Technology](http://bbc.com/technology) so you can see how results pop up and all asssets used on the project.
+
+###- Pluging hyojun.fuzzy-finder on existent projects
+
+If you have your own **hyojun.guideline** project running:
+
+- grab the [distributed version](https://bitbucket.org/fbiz/hyojun.fuzzy-finder/downloads) that best fits your script architecture
+
+- make sure your html structure follows the pattern described above.
+
+- create the [cache file](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache.git) and initializer.
 
 ##Road map:
 
