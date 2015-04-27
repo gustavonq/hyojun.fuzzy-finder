@@ -87,7 +87,7 @@ Results mostly* follow the structure:
 </li>
 ```
 
-> when performing searches on url only the ```<span class="url">{{blob.h}}</span>``` will be suppressed. *@see Tips and tricks*
+> when performing searches on url only the ```<span class="url">{{blob.h}}</span>``` will be suppressed. *see Tips and tricks*
 
 ##Tips and tricks
 
