@@ -29,13 +29,13 @@ The css was created using [sass](http://sass-lang.com) and has only the rules ex
 
 ##How it works?
 
-hyojun.fuzzy-finder is blazing fast because all data is already cached and available on the page. You can [define your own set of rules](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache.git) and set what is going to be cached.
+hyojun.fuzzy-finder is blazing fast because all data is already cached and available on the page. You can [define your own set of rules](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache.git) and setup what is going to be cached.
 
 As you type your query, after the 2th char the engine will perform a search inside the database you provided, testing the query and rendering results.
 
-The implementation success relies on 3 steps:
+The implementation success relies on **3 steps**:
 
-###- HTML
+###1- HTML
 
 The javacript plugin requires only this html code:
 
@@ -48,7 +48,7 @@ The javacript plugin requires only this html code:
 
 > if your query returned results, besides adding them on the list (```<li>```) a class ```active``` will be placed on ```#fuzzy-result``` node.
 
-###- CSS
+###2- CSS
 
 This project is about caching the **Hyojun.Guideline** project so, there are a few *types* handled by the css in order to make easer identifying and filter results. The built in theme included on this project contains css rules for types (```sample.t```):
 
@@ -57,7 +57,7 @@ This project is about caching the **Hyojun.Guideline** project so, there are a f
 * **templates** templates on page;
 * **text** - for headers and link (a, h1, h2, h3, h4, h5, h6);
 
-###- Javascript
+###3- Javascript
 
 There are 2 steps to make the javascript work (and many approaches to it).
 
