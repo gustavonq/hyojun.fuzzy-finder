@@ -53,9 +53,9 @@ The javacript plugin requires only this html code:
 This project is about caching the **Hyojun.Guideline** project so, there are a few *types* handled by the css in order to make easer identifying and filter results. The built in theme included on this project contains css rules for types (```sample.t```):
 
 * **css**
-* **data-plugin** - used on node elements that has javascript plugins controlling them;
-* **templates** templates on page;
-* **text** - for headers and link (a, h1, h2, h3, h4, h5, h6);
+* **data-plugin** - used on node elements that has javascript controlling them;
+* **templates**
+* **text** - for headers and link (a, h1, h2, h3, h4, h5, h6) describing modules;
 
 ###3- Javascript
 
