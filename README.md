@@ -138,13 +138,13 @@ Considering that your query got a few results, you can:
 
 ###- For developers:
 
-1 - ```git clone git@bitbucket.org:fbiz/hyojun.fuzzy-finder.git```
+1. ```git clone git@bitbucket.org:fbiz/hyojun.fuzzy-finder.git```
 
-2 - ```npm install```
+2. ```npm install```
 
-3 - ```npm start``` 
+3. ```npm start``` 
 
-```npm start``` will run the grunt's **default task** and start serving the tests via [python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)
+> ```npm start``` will run the grunt's **default task** and start serving the tests on your localhost ([python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html))
 
 All tests will be placed on **/test** folder.
 
@@ -154,11 +154,9 @@ All tests will be placed on **/test** folder.
 
 If you have your own **hyojun.guideline** project running:
 
-- grab the [distributed version](https://bitbucket.org/fbiz/hyojun.fuzzy-finder/downloads) that best fits your script architecture
-
-- make sure your html structure follows the pattern described above.
-
-- create the [cache file and the initializer via grunt](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache.git).
+1. grab the [distributed version](https://bitbucket.org/fbiz/hyojun.fuzzy-finder/downloads) that best fits your script architecture
+2. make sure your html structure follows the pattern described above.
+3. create the [cache file and the initializer via grunt](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache.git).
 
 ##Road map:
 
