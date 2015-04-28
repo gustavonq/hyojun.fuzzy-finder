@@ -39,15 +39,14 @@ The implementation success relies on 3 steps:
 
 The javacript plugin requires only this html code:
 
-```
+```html
 <form>
-	<input id="fuzzy-query" type="text"/>
-	<ul id="fuzzy-result"></ul>
+    <input id="fuzzy-query" type="text"/>
+    <ul id="fuzzy-result"></ul>
 </form>
 ```
 
-> if your query returned results, besides adding them on the list (```<li>```) a class ```active``` will be placed on ```#fuzzy-result``` holder.
-
+> if your query returned results, besides adding them on the list (```<li>```) a class ```active``` will be placed on ```#fuzzy-result``` node.
 
 ###- CSS
 
@@ -68,7 +67,7 @@ There are 2 steps to make the javascript work (and many approaches to it).
 
 2 - The *namespace* to access the library is **hyojun-fuzzy-finder** and the plugin is started by the controller: **hyojun.fuzzy-finder/controller**
 
-```
+```javascript
 require('hyojun.fuzzy-finder/controller')(myCachedDataBase);
 ```
 
@@ -76,7 +75,7 @@ require('hyojun.fuzzy-finder/controller')(myCachedDataBase);
 
 Results mostly* follow the structure:
 
-```
+```html
 <li>
 	<a class="item" href="{{sample.h}}" target="_blank" data-type="{{sample.t}}">
 		<span class="content">{{sample.c}} (leading chunk)</span>
@@ -87,7 +86,7 @@ Results mostly* follow the structure:
 </li>
 ```
 
-> when performing searches on url only the ```<span class="url">{{sample.h}}</span>``` will be suppressed. *@see Tips and tricks*
+> when performing searches on url only the ```<span class="url">``` will be suppressed.
 
 ##Tips and tricks
 
@@ -99,13 +98,13 @@ There are a few tips that can you doing better searches, they are:
 
 Every *sample* has it's type (```sample.t```) and you can choose to performe your search only for a specific types. To make it work use:
 
-```{{sample.t}}:{{query}}```
+    {{sample.t}}:{{query}}
 
 **Example:**
 
 Considering this query on your input text: 
 
-```template:search-suggestion```
+    template:search-suggestion
 
 This will first grab only *samples* that are ```templates``` (```sample.t```) and then try to match ```search-suggestion``` over ```sample.c```.
 
@@ -117,13 +116,17 @@ This will first grab only *samples* that are ```templates``` (```sample.t```) an
 
 Sometimes you just remember the url (not the service name, or the module name) and you can test your query also on urls. There is a specific notation for that:
 
-```url!{{query}}```
+    url!{{query}}
 
-> you can combine this feature with filters as well: ```template:url!search-suggestion```
+You can also combine this feature with filters as well:
+
+    template:url!search-suggestion
+
+> this example will first grab samples that are ```template``` (`sample.t`) and then match `search-suggestion` on sample's url (`sample.h`)
 
 ### # Keyboard shortcuts:
 
-Considering you query returned a few results, you can:
+Considering that your query got a few results, you can:
 
 * navigate on results using your arrows keys (**up** and **down**). 
 
@@ -131,10 +134,9 @@ Considering you query returned a few results, you can:
 
 * hit **esc** to close the results' window.
 
-
 ##How to install:
 
-###- For devs:
+###- For developers:
 
 1 - ```git clone git@bitbucket.org:fbiz/hyojun.fuzzy-finder.git```
 
@@ -148,8 +150,7 @@ All tests will be placed on **/test** folder.
 
 > The test page is created caching [BBB Technology home page](http://bbc.com/technology), so you can see how results pop up and all asssets used on the project. (tip: type a query to bring some headlines from their homepage).
 
-
-###- Pluging hyojun.fuzzy-finder on existent projects
+###- For those who only want to plug hyojun.fuzzy-finder on existent projects
 
 If you have your own **hyojun.guideline** project running:
 
@@ -157,7 +158,7 @@ If you have your own **hyojun.guideline** project running:
 
 - make sure your html structure follows the pattern described above.
 
-- create the [cache file](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache.git) and initializer.
+- create the [cache file and the initializer via grunt](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache.git).
 
 ##Road map:
 
