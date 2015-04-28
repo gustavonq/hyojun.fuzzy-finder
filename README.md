@@ -51,7 +51,7 @@ The javacript plugin requires only this html code:
 
 ###- CSS
 
-This project is about caching the **Hyojun.Guideline** project so, there are a few *types* handled by the css in order to make easer identifying and filter results. The built in theme included on this project contains css rules for types (```blob.t```):
+This project is about caching the **Hyojun.Guideline** project so, there are a few *types* handled by the css in order to make easer identifying and filter results. The built in theme included on this project contains css rules for types (```sample.t```):
 
 * **css**
 * **data-plugin** - used on node elements that has javascript plugins controlling them;
@@ -78,16 +78,16 @@ Results mostly* follow the structure:
 
 ```
 <li>
-	<a class="item" href="{{blob.h}}" target="_blank" data-type="{{blob.t}}">
-		<span class="content">{{blob.c}} (leading chunk)</span>
-		<span class="selection">{{blob.c}} (matching value)</span>
-		<span class="content">{{blob.c}} (trailing chunk)</span>
-		<span class="url">{{blob.h}}</span>
+	<a class="item" href="{{sample.h}}" target="_blank" data-type="{{sample.t}}">
+		<span class="content">{{sample.c}} (leading chunk)</span>
+		<span class="selection">{{sample.c}} (matching value)</span>
+		<span class="content">{{sample.c}} (trailing chunk)</span>
+		<span class="url">{{sample.h}}</span>
 	</a>
 </li>
 ```
 
-> when performing searches on url only the ```<span class="url">{{blob.h}}</span>``` will be suppressed. *@see Tips and tricks*
+> when performing searches on url only the ```<span class="url">{{sample.h}}</span>``` will be suppressed. *@see Tips and tricks*
 
 ##Tips and tricks
 
@@ -97,9 +97,9 @@ There are a few tips that can you doing better searches, they are:
 
 ### # Filtering reuslts
 
-Every *blob* has it's type (```blob.t```) and you can choose to performe your search only for a specific types. To make it work use:
+Every *sample* has it's type (```sample.t```) and you can choose to performe your search only for a specific types. To make it work use:
 
-```{{blob.t}}:{{query}}```
+```{{sample.t}}:{{query}}```
 
 **Example:**
 
@@ -107,9 +107,10 @@ Considering this query on your input text:
 
 ```template:search-suggestion```
 
-This will first grab only *blobs* that are ```templates``` (```blob.t```) and then try to match ```search-suggestion``` over ```blob.c```.
+This will first grab only *samples* that are ```templates``` (```sample.t```) and then try to match ```search-suggestion``` over ```sample.c```.
 
-> you can combine more than on filter: ```template:link:guideline```. This example will search for **guideline** only on *blobs* that are **template** or **link**
+> you can combine more than one filter as well: ```template:link:guideline```.
+> This example will search for **guideline** only on *samples* that are **template** or **link**
 
 
 ### # Testing your query over urls
@@ -131,7 +132,7 @@ Considering you query returned a few results, you can:
 * hit **esc** to close the results' window.
 
 
-##Instalation:
+##How to install:
 
 ###- For devs:
 
