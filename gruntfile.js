@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-		'fuzzy-finder-cache' : {
+		'fuzzy-finder' : {
 			'bbc-homepage' : {
 				'out' : 'test/hyojun.fuzzy-finder-plugin.js',
 				'pages' : ['http://www.bbc.com/news/technology'],
@@ -82,9 +82,9 @@ module.exports = function(grunt) {
 	grunt.loadTasks('node_modules/grunt-contrib-requirejs/tasks');
 	grunt.loadTasks('node_modules/grunt-contrib-concat/tasks');
 	grunt.loadTasks('node_modules/grunt-sass/tasks');
-	grunt.loadTasks('node_modules/hyojun.grunt.fuzzy-finder-cache/tasks');
+	grunt.loadTasks('node_modules/hyojun.grunt.fuzzy-finder/tasks');
 
 	grunt.registerTask('test', ['requirejs', 'concat']);
-	grunt.registerTask('default',['sass', 'fuzzy-finder-cache', 'test']);
+	grunt.registerTask('default',['sass', 'fuzzy-finder', 'test']);
 };
 

@@ -1,7 +1,5 @@
 #hyojun.fuzzy-finder
 
-**version: 0.1.0**
-
 -working on: *Chrome 41+, Firefox 44+, IE 10+, Safari 7+*
 
 ##About

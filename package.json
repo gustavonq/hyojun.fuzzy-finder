@@ -1,12 +1,12 @@
 {
   "name": "hyojun.js.fuzzy-finder",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "bootstrap with grunt,css,js and test pages regarding hyojun.fuzzy-finder",
-	"private" : true,
+  "private": true,
   "main": "gruntfile.js",
   "scripts": {
     "test": "grunt",
-		"start" : "grunt && python -m SimpleHTTPServer"
+    "start": "grunt && python -m SimpleHTTPServer"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,6 @@
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-sass": "^0.18.1",
-    "hyojun.grunt.fuzzy-finder-cache": "https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache/get/0.1.2.tar.gz"
+    "hyojun.grunt.fuzzy-finder": "https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder/get/0.1.5.tar.gz"
   }
 }
