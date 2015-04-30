@@ -12,7 +12,7 @@ It contains:
 
 * javascript required to make the ux work
 * css required to render properly the search results
-* the [grunt task](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache.git) that sniff the pages and cache the values
+* the [grunt task](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder.git) that sniff the pages and cache the values
 * working examples (running ```grunt```)
 
 ####The javascript
@@ -27,7 +27,7 @@ The css was created using [sass](http://sass-lang.com) and has only the rules ex
 
 ##How it works?
 
-hyojun.fuzzy-finder is blazing fast because all data is already cached and available on the page. You can [define your own set of rules](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache.git) and setup what is going to be cached.
+hyojun.fuzzy-finder is blazing fast because all data is already cached and available on the page. You can [define your own set of rules](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder.git) and setup what is going to be cached.
 
 As you type your query, after the 2th char the engine will perform a search inside the database you provided, testing the query and rendering results.
 
@@ -154,7 +154,7 @@ If you have your own **hyojun.guideline** project running:
 
 1. grab the [distributed version](https://bitbucket.org/fbiz/hyojun.fuzzy-finder/downloads) that best fits your script architecture
 2. make sure your html structure follows the pattern described above.
-3. create the [cache file and the initializer via grunt](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder-cache.git).
+3. create the [cache file and the initializer via grunt](https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder.git).
 
 ##Road map:
 
