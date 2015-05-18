@@ -87,7 +87,16 @@ define([ "hyojun.fuzzy-finder/model", "hyojun.fuzzy-finder/view", "hyojun.fuzzy-
 			this.setQueryStatus('results:' + this.nav.resultLength + '/ query:' + qt + "ms/ render:" + rt+"ms");
 		},
 
-		closeView : function(event){
+
+
+		closeView : function(event){		
+			if (!!event){
+				if (event.currentTarget === this.inputEle.form) {
+					event.preventDefault();
+					return;
+				}
+			}
+
 			clearTimeout(this.timeout);
 			this.nav.reset();
 			this.query = undefined;
