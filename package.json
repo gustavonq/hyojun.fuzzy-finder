@@ -24,6 +24,6 @@
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-sass": "^0.18.1",
-    "hyojun.grunt.fuzzy-finder": "https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder/get/0.1.5.tar.gz"
+    "hyojun.grunt.fuzzy-finder": "https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder/get/0.1.6.tar.gz"
   }
 }
