@@ -89,12 +89,13 @@ define([ "hyojun.fuzzy-finder/model", "hyojun.fuzzy-finder/view", "hyojun.fuzzy-
 
 
 
-		closeView : function(event){		
+		closeView : function(event) {
 			if (!!event){
-				if (event.currentTarget === this.inputEle.form) {
+				if ((!!event.relatedTarget && event.relatedTarget.tagName.toLowerCase() === 'a') || 
+					(document.activeElement.tagName.toLowerCase() === 'a')){
 					event.preventDefault();
 					return;
-				}
+				} 
 			}
 
 			clearTimeout(this.timeout);
@@ -103,6 +104,9 @@ define([ "hyojun.fuzzy-finder/model", "hyojun.fuzzy-finder/view", "hyojun.fuzzy-
 			this.setQueryStatus('');
 			this.view.clearResults();
 			this.view.close();
+			if (!!event){
+				event.preventDefault();
+			}
 		},
 
 		setQueryStatus : function(value){
