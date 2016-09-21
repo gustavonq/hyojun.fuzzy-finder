@@ -1,6 +1,6 @@
 {
   "name": "hyojun.fuzzy-finder",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "bootstrap with grunt,css,js and test pages regarding hyojun.fuzzy-finder",
   "private": true,
   "main": "gruntfile.js",
@@ -23,7 +23,6 @@
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-requirejs": "^0.4.4",
-    "grunt-sass": "^0.18.1",
-    "hyojun.grunt.fuzzy-finder": "https://bitbucket.org/fbiz/hyojun.grunt.fuzzy-finder/get/0.1.7.tar.gz"
+    "grunt-sass": "^1.2.0"
   }
 }
